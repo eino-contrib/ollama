@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/fs/gguf"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
-	"github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/fs/gguf"
 )
 
 func createBinFile(tb testing.TB) string {

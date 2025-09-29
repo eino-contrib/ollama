@@ -12,8 +12,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ollama/ollama/format"
-	"github.com/ollama/ollama/fs"
+	"github.com/eino-contrib/ollama/format"
+	"github.com/eino-contrib/ollama/fs"
 )
 
 type Backend interface {

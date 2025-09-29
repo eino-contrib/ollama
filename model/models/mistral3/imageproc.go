@@ -6,8 +6,8 @@ import (
 	_ "image/png"
 	"math"
 
-	"github.com/ollama/ollama/fs"
-	"github.com/ollama/ollama/model/imageproc"
+	"github.com/eino-contrib/ollama/fs"
+	"github.com/eino-contrib/ollama/model/imageproc"
 )
 
 type ImageProcessor struct {

@@ -5,7 +5,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ollama/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/fs/ggml"
 )
 
 type qwen25VLModel struct {

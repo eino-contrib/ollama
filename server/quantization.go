@@ -9,8 +9,8 @@ import (
 	"strings"
 	"unsafe"
 
-	fsggml "github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/ml/backend/ggml"
+	fsggml "github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/ml/backend/ggml"
 )
 
 type quantizer struct {

@@ -13,7 +13,7 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	"github.com/ollama/ollama/convert/sentencepiece"
+	"github.com/eino-contrib/ollama/convert/sentencepiece"
 )
 
 func parseSentencePiece(fsys fs.FS) (*Vocabulary, error) {

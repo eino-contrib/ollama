@@ -6,12 +6,12 @@ import (
 	"slices"
 	"testing"
 
+	"github.com/eino-contrib/ollama/fs"
+	fsggml "github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/ml/backend/ggml"
+	"github.com/eino-contrib/ollama/ml/nn"
 	"github.com/google/go-cmp/cmp"
-	"github.com/ollama/ollama/fs"
-	fsggml "github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/ml/backend/ggml"
-	"github.com/ollama/ollama/ml/nn"
 )
 
 func TestParseTags(t *testing.T) {

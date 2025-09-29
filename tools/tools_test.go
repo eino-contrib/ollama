@@ -5,8 +5,8 @@ import (
 	"testing"
 	"text/template"
 
+	"github.com/eino-contrib/ollama/api"
 	"github.com/google/go-cmp/cmp"
-	"github.com/ollama/ollama/api"
 )
 
 func TestParser(t *testing.T) {

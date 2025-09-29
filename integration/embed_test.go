@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/eino-contrib/ollama/api"
 	"github.com/google/go-cmp/cmp"
-	"github.com/ollama/ollama/api"
 )
 
 func dotProduct[V float32 | float64](v1, v2 []V) V {

@@ -23,9 +23,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/app/lifecycle"
-	"github.com/ollama/ollama/format"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/app/lifecycle"
+	"github.com/eino-contrib/ollama/format"
 )
 
 var (

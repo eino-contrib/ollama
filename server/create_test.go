@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 )
 
 func TestConvertFromSafetensors(t *testing.T) {

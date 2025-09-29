@@ -3,7 +3,7 @@ package convert
 import (
 	"cmp"
 
-	"github.com/ollama/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/fs/ggml"
 )
 
 type gemma3Model struct {

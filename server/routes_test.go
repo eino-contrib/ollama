@@ -22,14 +22,14 @@ import (
 	"testing"
 	"unicode"
 
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/openai"
+	"github.com/eino-contrib/ollama/server/internal/client/ollama"
+	"github.com/eino-contrib/ollama/types/model"
+	"github.com/eino-contrib/ollama/version"
 	"github.com/gin-gonic/gin"
 	"github.com/google/go-cmp/cmp"
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/openai"
-	"github.com/ollama/ollama/server/internal/client/ollama"
-	"github.com/ollama/ollama/types/model"
-	"github.com/ollama/ollama/version"
 )
 
 func createTestFile(t *testing.T, name string) (string, string) {

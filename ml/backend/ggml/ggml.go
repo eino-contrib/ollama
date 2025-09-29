@@ -25,13 +25,13 @@ import (
 	"unicode"
 	"unsafe"
 
-	"github.com/ollama/ollama/format"
-	"github.com/ollama/ollama/fs"
-	fsggml "github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/logutil"
-	"github.com/ollama/ollama/ml"
-	ggml "github.com/ollama/ollama/ml/backend/ggml/ggml/src"
-	"github.com/ollama/ollama/ml/nn/rope"
+	"github.com/eino-contrib/ollama/format"
+	"github.com/eino-contrib/ollama/fs"
+	fsggml "github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/logutil"
+	"github.com/eino-contrib/ollama/ml"
+	ggml "github.com/eino-contrib/ollama/ml/backend/ggml/ggml/src"
+	"github.com/eino-contrib/ollama/ml/nn/rope"
 	"golang.org/x/sync/errgroup"
 )
 

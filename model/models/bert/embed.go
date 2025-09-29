@@ -4,12 +4,12 @@ import (
 	"cmp"
 	"math"
 
-	"github.com/ollama/ollama/fs"
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/ml/nn"
-	"github.com/ollama/ollama/ml/nn/pooling"
-	"github.com/ollama/ollama/model"
-	"github.com/ollama/ollama/model/input"
+	"github.com/eino-contrib/ollama/fs"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/ml/nn"
+	"github.com/eino-contrib/ollama/ml/nn/pooling"
+	"github.com/eino-contrib/ollama/model"
+	"github.com/eino-contrib/ollama/model/input"
 )
 
 type Model struct {

@@ -20,12 +20,12 @@ import (
 
 	"golang.org/x/sync/semaphore"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/llama"
-	"github.com/ollama/ollama/llm"
-	"github.com/ollama/ollama/logutil"
-	"github.com/ollama/ollama/runner/common"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/llama"
+	"github.com/eino-contrib/ollama/llm"
+	"github.com/eino-contrib/ollama/logutil"
+	"github.com/eino-contrib/ollama/runner/common"
 )
 
 // input is an element of the prompt to process, either

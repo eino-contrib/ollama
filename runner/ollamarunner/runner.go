@@ -26,18 +26,18 @@ import (
 	"golang.org/x/image/bmp"
 	"golang.org/x/sync/semaphore"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/llm"
-	"github.com/ollama/ollama/logutil"
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/ml/nn/pooling"
-	"github.com/ollama/ollama/model"
-	"github.com/ollama/ollama/model/input"
-	"github.com/ollama/ollama/runner/common"
-	"github.com/ollama/ollama/sample"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/llm"
+	"github.com/eino-contrib/ollama/logutil"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/ml/nn/pooling"
+	"github.com/eino-contrib/ollama/model"
+	"github.com/eino-contrib/ollama/model/input"
+	"github.com/eino-contrib/ollama/runner/common"
+	"github.com/eino-contrib/ollama/sample"
 
-	_ "github.com/ollama/ollama/model/models"
+	_ "github.com/eino-contrib/ollama/model/models"
 )
 
 type Sequence struct {

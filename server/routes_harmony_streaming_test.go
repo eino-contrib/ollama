@@ -12,11 +12,11 @@ import (
 	"testing"
 	"time"
 
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/discover"
+	"github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/llm"
 	"github.com/gin-gonic/gin"
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/discover"
-	"github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/llm"
 )
 
 func getTestTools() []api.Tool {

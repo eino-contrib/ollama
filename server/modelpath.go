@@ -10,8 +10,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/types/model"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/types/model"
 )
 
 type ModelPath struct {

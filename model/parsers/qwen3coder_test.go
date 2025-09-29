@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 )
 
 // tool creates a test tool with the given name and properties
@@ -443,7 +443,7 @@ true
 				},
 			},
 		},
-		// regression test for <https://github.com/ollama/ollama/issues/12357>
+		// regression test for <https://github.com/eino-contrib/ollama/issues/12357>
 		{
 			name:  "ampersands in parameter values",
 			tools: []api.Tool{},

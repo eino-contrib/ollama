@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 )
 
 func TestLongInputContext(t *testing.T) {
