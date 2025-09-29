@@ -11,7 +11,7 @@ import (
 	"github.com/pdevine/tensor"
 	"github.com/pdevine/tensor/native"
 
-	"github.com/ollama/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/fs/ggml"
 )
 
 type split struct {

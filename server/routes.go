@@ -29,24 +29,24 @@ import (
 	"golang.org/x/image/webp"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/auth"
-	"github.com/ollama/ollama/discover"
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/format"
-	"github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/llm"
-	"github.com/ollama/ollama/logutil"
-	"github.com/ollama/ollama/model/parsers"
-	"github.com/ollama/ollama/openai"
-	"github.com/ollama/ollama/server/internal/client/ollama"
-	"github.com/ollama/ollama/server/internal/registry"
-	"github.com/ollama/ollama/template"
-	"github.com/ollama/ollama/thinking"
-	"github.com/ollama/ollama/tools"
-	"github.com/ollama/ollama/types/errtypes"
-	"github.com/ollama/ollama/types/model"
-	"github.com/ollama/ollama/version"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/auth"
+	"github.com/eino-contrib/ollama/discover"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/format"
+	"github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/llm"
+	"github.com/eino-contrib/ollama/logutil"
+	"github.com/eino-contrib/ollama/model/parsers"
+	"github.com/eino-contrib/ollama/openai"
+	"github.com/eino-contrib/ollama/server/internal/client/ollama"
+	"github.com/eino-contrib/ollama/server/internal/registry"
+	"github.com/eino-contrib/ollama/template"
+	"github.com/eino-contrib/ollama/thinking"
+	"github.com/eino-contrib/ollama/tools"
+	"github.com/eino-contrib/ollama/types/errtypes"
+	"github.com/eino-contrib/ollama/types/model"
+	"github.com/eino-contrib/ollama/version"
 )
 
 const signinURLStr = "https://ollama.com/connect?name=%s&key=%s"
@@ -367,7 +367,12 @@ func (s *Server) GenerateHandler(c *gin.Context) {
 
 	images := make([]llm.ImageData, len(req.Images))
 	for i := range req.Images {
-		images[i] = llm.ImageData{ID: i, Data: req.Images[i]}
+		dataBs, err := base64.StdEncoding.DecodeString(string(req.Images[i]))
+		if err != nil {
+			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "the Image in the request is in illegal for base64 of raw binary"})
+			return
+		}
+		images[i] = llm.ImageData{ID: i, Data: dataBs}
 	}
 
 	prompt := req.Prompt

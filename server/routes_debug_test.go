@@ -2,16 +2,17 @@ package server
 
 import (
 	"bytes"
+	"encoding/base64"
 	"encoding/json"
 	"net/http"
 	"testing"
 	"time"
 
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/discover"
+	"github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/llm"
 	"github.com/gin-gonic/gin"
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/discover"
-	"github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/llm"
 )
 
 func TestGenerateDebugRenderOnly(t *testing.T) {
@@ -140,9 +141,10 @@ func TestGenerateDebugRenderOnly(t *testing.T) {
 		{
 			name: "debug render only with images",
 			request: api.GenerateRequest{
-				Model:           "test-model",
-				Prompt:          "Describe this image",
-				Images:          []api.ImageData{[]byte("fake-image-data")},
+				Model:  "test-model",
+				Prompt: "Describe this image",
+				Images: []api.ImageData{api.ImageData(base64.StdEncoding.EncodeToString([]byte("fake-image-data")))},
+
 				DebugRenderOnly: true,
 			},
 			expectDebug:     true,
@@ -335,7 +337,7 @@ func TestChatDebugRenderOnly(t *testing.T) {
 					{
 						Role:    "user",
 						Content: "What's in this image?",
-						Images:  []api.ImageData{[]byte("fake-image-data")},
+						Images:  []api.ImageData{api.ImageData(base64.StdEncoding.EncodeToString([]byte("fake-image-data")))},
 					},
 				},
 				DebugRenderOnly: true,

@@ -9,8 +9,8 @@ import (
 	"strings"
 
 	"github.com/dlclark/regexp2"
+	"github.com/eino-contrib/ollama/logutil"
 	heap "github.com/emirpasic/gods/v2/trees/binaryheap"
-	"github.com/ollama/ollama/logutil"
 )
 
 type BytePairEncoding struct {

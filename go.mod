@@ -1,4 +1,4 @@
-module github.com/ollama/ollama
+module github.com/eino-contrib/ollama
 
 go 1.24.0
 

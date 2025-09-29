@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 )
 
 var (

@@ -1,6 +1,6 @@
 package nn
 
-import "github.com/ollama/ollama/ml"
+import "github.com/eino-contrib/ollama/ml"
 
 type Embedding struct {
 	Weight ml.Tensor `gguf:"weight"`

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ollama/ollama/logutil"
+	"github.com/eino-contrib/ollama/logutil"
 )
 
 const spmWhitespaceSep = "▁"

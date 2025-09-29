@@ -15,13 +15,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/discover"
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/format"
-	"github.com/ollama/ollama/fs/ggml"
-	"github.com/ollama/ollama/llm"
-	"github.com/ollama/ollama/types/model"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/discover"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/format"
+	"github.com/eino-contrib/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/llm"
+	"github.com/eino-contrib/ollama/types/model"
 )
 
 type LlmRequest struct {
@@ -390,7 +390,7 @@ func (s *Scheduler) load(req *LlmRequest, f *ggml.GGML, gpus discover.GpuInfoLis
 	}
 
 	// `mllama` is a snowflake and uses an encoder cache which cannot be used with num_parallel > 1
-	// ref: https://github.com/ollama/ollama/issues/4165
+	// ref: https://github.com/eino-contrib/ollama/issues/4165
 	if slices.Contains(req.model.Config.ModelFamilies, "mllama") && numParallel != 1 {
 		numParallel = 1
 		slog.Warn("mllama does not currently support parallel requests")

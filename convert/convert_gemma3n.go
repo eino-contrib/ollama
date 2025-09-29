@@ -4,7 +4,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ollama/ollama/fs/ggml"
+	"github.com/eino-contrib/ollama/fs/ggml"
 	"github.com/pdevine/tensor"
 	"github.com/pdevine/tensor/native"
 	"gonum.org/v1/gonum/stat/distuv"

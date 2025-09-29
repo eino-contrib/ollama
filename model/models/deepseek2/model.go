@@ -5,14 +5,14 @@ package deepseek2
 import (
 	"math"
 
-	"github.com/ollama/ollama/fs"
-	"github.com/ollama/ollama/kvcache"
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/ml/nn"
-	"github.com/ollama/ollama/ml/nn/fast"
-	"github.com/ollama/ollama/ml/nn/rope"
-	"github.com/ollama/ollama/model"
-	"github.com/ollama/ollama/model/input"
+	"github.com/eino-contrib/ollama/fs"
+	"github.com/eino-contrib/ollama/kvcache"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/ml/nn"
+	"github.com/eino-contrib/ollama/ml/nn/fast"
+	"github.com/eino-contrib/ollama/ml/nn/rope"
+	"github.com/eino-contrib/ollama/model"
+	"github.com/eino-contrib/ollama/model/input"
 )
 
 type Options struct {

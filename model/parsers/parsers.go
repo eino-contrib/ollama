@@ -1,8 +1,8 @@
 package parsers
 
 import (
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/harmony"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/harmony"
 )
 
 type Parser interface {

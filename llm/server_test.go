@@ -7,10 +7,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/discover"
-	"github.com/ollama/ollama/format"
-	"github.com/ollama/ollama/ml"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/discover"
+	"github.com/eino-contrib/ollama/format"
+	"github.com/eino-contrib/ollama/ml"
 	"golang.org/x/sync/semaphore"
 )
 

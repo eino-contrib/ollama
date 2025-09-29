@@ -39,10 +39,10 @@ import (
 	"sync"
 	"unsafe"
 
-	_ "github.com/ollama/ollama/llama/llama.cpp/common"
-	_ "github.com/ollama/ollama/llama/llama.cpp/src"
-	_ "github.com/ollama/ollama/llama/llama.cpp/tools/mtmd"
-	ggml "github.com/ollama/ollama/ml/backend/ggml/ggml/src"
+	_ "github.com/eino-contrib/ollama/llama/llama.cpp/common"
+	_ "github.com/eino-contrib/ollama/llama/llama.cpp/src"
+	_ "github.com/eino-contrib/ollama/llama/llama.cpp/tools/mtmd"
+	ggml "github.com/eino-contrib/ollama/ml/backend/ggml/ggml/src"
 )
 
 func init() {

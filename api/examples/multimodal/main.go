@@ -2,11 +2,12 @@ package main
 
 import (
 	"context"
+	"encoding/base64"
 	"fmt"
 	"log"
 	"os"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 )
 
 func main() {
@@ -27,7 +28,7 @@ func main() {
 	req := &api.GenerateRequest{
 		Model:  "llava",
 		Prompt: "describe this image",
-		Images: []api.ImageData{imgData},
+		Images: []api.ImageData{api.ImageData(base64.StdEncoding.EncodeToString(imgData))},
 	}
 
 	ctx := context.Background()

@@ -4,9 +4,9 @@ import (
 	"math"
 	"slices"
 
-	"github.com/ollama/ollama/fs"
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/ml/nn"
+	"github.com/eino-contrib/ollama/fs"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/ml/nn"
 )
 
 var batchSize int = 1

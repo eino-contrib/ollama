@@ -111,7 +111,7 @@ FROM llama3.2
 ```
 
 A list of available base models:
-<https://github.com/ollama/ollama#model-library>
+<https://github.com/eino-contrib/ollama#model-library>
 Additional models can be found at:
 <https://ollama.com/library>
 

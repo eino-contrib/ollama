@@ -3,7 +3,6 @@ package openai
 
 import (
 	"bytes"
-	"encoding/base64"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -16,8 +15,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/types/model"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/types/model"
 )
 
 var finishReasonToolCalls = "tool_calls"
@@ -129,7 +128,7 @@ type ChatCompletionChunk struct {
 	Usage             *Usage        `json:"usage,omitempty"`
 }
 
-// TODO (https://github.com/ollama/ollama/issues/5259): support []string, []int and [][]int
+// TODO (https://github.com/eino-contrib/ollama/issues/5259): support []string, []int and [][]int
 type CompletionRequest struct {
 	Model            string         `json:"model"`
 	Prompt           string         `json:"prompt"`
@@ -461,13 +460,8 @@ func fromChatRequest(r ChatCompletionRequest) (*api.ChatRequest, error) {
 					if !valid {
 						return nil, errors.New("invalid image input")
 					}
+					messages = append(messages, api.Message{Role: msg.Role, Images: []api.ImageData{api.ImageData(url)}})
 
-					img, err := base64.StdEncoding.DecodeString(url)
-					if err != nil {
-						return nil, errors.New("invalid message format")
-					}
-
-					messages = append(messages, api.Message{Role: msg.Role, Images: []api.ImageData{img}})
 				default:
 					return nil, errors.New("invalid message format")
 				}

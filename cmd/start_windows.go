@@ -13,7 +13,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 	"golang.org/x/sys/windows"
 )
 

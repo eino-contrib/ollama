@@ -2,7 +2,6 @@ package openai
 
 import (
 	"bytes"
-	"encoding/base64"
 	"encoding/json"
 	"io"
 	"net/http"
@@ -15,7 +14,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/ollama/ollama/api"
+	"github.com/eino-contrib/ollama/api"
 )
 
 const (
@@ -183,10 +182,7 @@ func TestChatMiddleware(t *testing.T) {
 					{
 						Role: "user",
 						Images: []api.ImageData{
-							func() []byte {
-								img, _ := base64.StdEncoding.DecodeString(image)
-								return img
-							}(),
+							api.ImageData(image),
 						},
 					},
 				},

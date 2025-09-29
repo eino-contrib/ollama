@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"bytes"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -16,8 +17,8 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/spf13/cobra"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/types/model"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/types/model"
 )
 
 func TestShowInfo(t *testing.T) {
@@ -959,7 +960,6 @@ func TestRunOptions_Copy(t *testing.T) {
 	// Setup test data
 	originalKeepAlive := &api.Duration{Duration: 5 * time.Minute}
 	originalThink := &api.ThinkValue{Value: "test reasoning"}
-
 	original := runOptions{
 		Model:       "test-model",
 		ParentModel: "parent-model",
@@ -972,8 +972,8 @@ func TestRunOptions_Copy(t *testing.T) {
 		Format:   "json",
 		System:   "system prompt",
 		Images: []api.ImageData{
-			[]byte("image1"),
-			[]byte("image2"),
+			api.ImageData(base64.StdEncoding.EncodeToString([]byte("image1"))),
+			api.ImageData(base64.StdEncoding.EncodeToString([]byte("image2"))),
 		},
 		Options: map[string]any{
 			"temperature": 0.7,
@@ -1050,7 +1050,7 @@ func TestRunOptions_Copy(t *testing.T) {
 	// Modify original to verify independence
 	if len(original.Images) > 0 {
 		originalImage := original.Images[0]
-		original.Images[0] = []byte("modified")
+		original.Images[0] = api.ImageData(base64.StdEncoding.EncodeToString([]byte("modified")))
 		if len(copied.Images) > 0 && string(copied.Images[0]) == "modified" {
 			t.Error("Images should be independent after copy")
 		}

@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"cmp"
+	"encoding/base64"
 	"errors"
 	"fmt"
 	"io"
@@ -14,11 +15,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/readline"
-	"github.com/ollama/ollama/types/errtypes"
-	"github.com/ollama/ollama/types/model"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/readline"
+	"github.com/eino-contrib/ollama/types/errtypes"
+	"github.com/eino-contrib/ollama/types/model"
 )
 
 type MultilineState int
@@ -591,7 +592,8 @@ func extractFileData(input string) (string, []api.ImageData, error) {
 		input = strings.ReplaceAll(input, "'"+nfp+"'", "")
 		input = strings.ReplaceAll(input, "'"+fp+"'", "")
 		input = strings.ReplaceAll(input, fp, "")
-		imgs = append(imgs, data)
+		imgs = append(imgs, api.ImageData(base64.StdEncoding.EncodeToString(data)))
+
 	}
 	return strings.TrimSpace(input), imgs, nil
 }

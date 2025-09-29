@@ -3,8 +3,8 @@ package ollamarunner
 import (
 	"errors"
 
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/model/input"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/model/input"
 )
 
 // Tensors can't be used across multiple compute graphs. This is a problem

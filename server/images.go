@@ -21,15 +21,15 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ollama/ollama/api"
-	"github.com/ollama/ollama/envconfig"
-	"github.com/ollama/ollama/fs/gguf"
-	"github.com/ollama/ollama/model/parsers"
-	"github.com/ollama/ollama/parser"
-	"github.com/ollama/ollama/template"
-	"github.com/ollama/ollama/thinking"
-	"github.com/ollama/ollama/types/model"
-	"github.com/ollama/ollama/version"
+	"github.com/eino-contrib/ollama/api"
+	"github.com/eino-contrib/ollama/envconfig"
+	"github.com/eino-contrib/ollama/fs/gguf"
+	"github.com/eino-contrib/ollama/model/parsers"
+	"github.com/eino-contrib/ollama/parser"
+	"github.com/eino-contrib/ollama/template"
+	"github.com/eino-contrib/ollama/thinking"
+	"github.com/eino-contrib/ollama/types/model"
+	"github.com/eino-contrib/ollama/version"
 )
 
 var (

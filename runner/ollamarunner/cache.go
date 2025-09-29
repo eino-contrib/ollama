@@ -7,10 +7,10 @@ import (
 	"math"
 	"time"
 
-	"github.com/ollama/ollama/kvcache"
-	"github.com/ollama/ollama/ml"
-	"github.com/ollama/ollama/model"
-	"github.com/ollama/ollama/model/input"
+	"github.com/eino-contrib/ollama/kvcache"
+	"github.com/eino-contrib/ollama/ml"
+	"github.com/eino-contrib/ollama/model"
+	"github.com/eino-contrib/ollama/model/input"
 )
 
 type InputCache struct {
