@@ -367,7 +367,12 @@ func (s *Server) GenerateHandler(c *gin.Context) {
 
 	images := make([]llm.ImageData, len(req.Images))
 	for i := range req.Images {
-		images[i] = llm.ImageData{ID: i, Data: req.Images[i]}
+		dataBs, err := base64.StdEncoding.DecodeString(string(req.Images[i]))
+		if err != nil {
+			c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "the Image in the request is in illegal for base64 of raw binary"})
+			return
+		}
+		images[i] = llm.ImageData{ID: i, Data: dataBs}
 	}
 
 	prompt := req.Prompt
